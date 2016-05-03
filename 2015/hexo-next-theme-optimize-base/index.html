@@ -1,0 +1,823 @@
+<!doctype html>
+<html class="theme-next   use-motion ">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.useso.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="NexT主题,github,hexo,swiftype," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="ARAO'S BLOG" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+
+
+
+
+
+
+<meta name="description" content="NexT主题安装使用从 GitHub 下载12$ cd your-hexo-site$ git clone https://github.com/iissnan/hexo-theme-next themes/next">
+<meta property="og:type" content="article">
+<meta property="og:title" content="动动手指，NexT主题与Hexo更搭哦（基础篇）">
+<meta property="og:url" content="http://www.arao.me/2015/hexo-next-theme-optimize-base/index.html">
+<meta property="og:site_name" content="ARAO'S BLOG">
+<meta property="og:description" content="NexT主题安装使用从 GitHub 下载12$ cd your-hexo-site$ git clone https://github.com/iissnan/hexo-theme-next themes/next">
+<meta property="og:image" content="http://araome.yiluup.com/2015/06/hexo-next-arao-edit.jpg">
+<meta property="og:image" content="http://araome.yiluup.com/2015/06/about-page-comment.jpg">
+<meta property="og:image" content="http://araome.yiluup.com/2015/06/qzone-404.jpg">
+<meta property="og:image" content="http://araome.yiluup.com/2015/06/your-swiftype-key.jpg">
+<meta property="og:image" content="http://araome.yiluup.com/2015/06/st-search-input.jpg">
+<meta property="og:updated_time" content="2016-05-01T19:33:38.332Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="动动手指，NexT主题与Hexo更搭哦（基础篇）">
+<meta name="twitter:description" content="NexT主题安装使用从 GitHub 下载12$ cd your-hexo-site$ git clone https://github.com/iissnan/hexo-theme-next themes/next">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'post',
+    motion: true
+  };
+</script>
+
+  <title> 动动手指，NexT主题与Hexo更搭哦（基础篇） - ARAO'S BLOG </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?a91faef8ba220886db00454b50778abd";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">ARAO'S BLOG</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">我们的征途是星辰大海</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-guestbook">
+          <a href="/guestbook" rel="section">
+            
+              <i class="menu-item-icon fa fa-question-circle fa-fw"></i> <br />
+            
+            留言
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <form class="site-search-form">
+    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+  </form>
+
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'XCcmyzbrYQeB73Dy3--x','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                动动手指，NexT主题与Hexo更搭哦（基础篇）
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-06-18T20:16:28+08:00" content="2015-06-18">
+              2015-06-18
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/hexo-next-theme-optimize-base/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/hexo-next-theme-optimize-base/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          &nbsp; | &nbsp;热度
+              <span id="2015/hexo-next-theme-optimize-base/"></span>°C
+              <script type="text/javascript">
+              function getProfile(str) {
+                  var arr = str;
+                  document.getElementById('2015/hexo-next-theme-optimize-base/').innerHTML = arr;
+              }
+              </script>
+              
+              <script type="text/javascript">
+                var strPrint='<script type=\"text\/javascript\" src=\"http:\/\/pv.yiluup.com\/postviews.php?postID=';
+                strPrint +=  '2015/hexo-next-theme-optimize-base/';
+                strPrint +=  '&act=add';
+                strPrint += '\"><\/script>';
+                document.write(strPrint);
+               </script>
+          
+
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p><img src="http://araome.yiluup.com/2015/06/hexo-next-arao-edit.jpg" alt="macbook下的hexo主题NexT.Mist预览"></p>
+<h2 id="NexT_u4E3B_u9898_u5B89_u88C5_u4F7F_u7528"><a href="#NexT_u4E3B_u9898_u5B89_u88C5_u4F7F_u7528" class="headerlink" title="NexT主题安装使用"></a>NexT主题安装使用</h2><h3 id="u4ECE_GitHub__u4E0B_u8F7D"><a href="#u4ECE_GitHub__u4E0B_u8F7D" class="headerlink" title="从 GitHub 下载"></a>从 <a href="http://www.arao.me/tags/github/">GitHub</a> 下载</h3><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">cd</span> your-hexo-site</span><br><span class="line">$ git clone http<span class="variable">s:</span>//github.<span class="keyword">com</span>/iissnan/hexo-theme-<span class="keyword">next</span> themes/<span class="keyword">next</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="u66F4_u6539_u7AD9_u70B9__config-yml__u4E2D_u7684_theme__u5B57_u6BB5_u8BBE_u7F6E_u4E3A_next"><a href="#u66F4_u6539_u7AD9_u70B9__config-yml__u4E2D_u7684_theme__u5B57_u6BB5_u8BBE_u7F6E_u4E3A_next" class="headerlink" title="更改站点 _config.yml 中的 theme 字段设置为 next"></a>更改站点 _config.yml 中的 theme 字段设置为 next</h3><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">theme</span>: <span class="string">next</span></span><br></pre></td></tr></table></figure>
+<h3 id="NexT_u4E3B_u9898_u7279_u8272_uFF1A_u7CBE_u4E8E_u5FC3_uFF0C_u7B80_u4E8E_u5F62"><a href="#NexT_u4E3B_u9898_u7279_u8272_uFF1A_u7CBE_u4E8E_u5FC3_uFF0C_u7B80_u4E8E_u5F62" class="headerlink" title="NexT主题特色：精于心，简于形"></a>NexT主题特色：精于心，简于形</h3><p><a href="http://www.arao.me/tags/NexT%E4%B8%BB%E9%A2%98/">NexT主题</a>是我接触Hexo的第一款主题，一见钟情的一款Hexo主题。<br>虽然NexT主题简约却并不简单，功能特性多样；响应式设计，电脑手机访问体验好，超级nice，你值得拥有！<br>如果结合你自己网站的实际增删改其中一些细节，那更加prefect了。</p>
+<h2 id="NexT_u4E3B_u9898_u521B_u5EFA__u201C_u7559_u8A00_u201D__u9875_u9762"><a href="#NexT_u4E3B_u9898_u521B_u5EFA__u201C_u7559_u8A00_u201D__u9875_u9762" class="headerlink" title="NexT主题创建 “留言” 页面"></a>NexT主题创建 “留言” 页面</h2><h3 id="u8BA9_u4F60_u7684page_u9875_u9762_u4E5F_u652F_u6301__u591A_u8BF4_/_DISQUS__u8BC4_u8BBA_u7CFB_u7EDF"><a href="#u8BA9_u4F60_u7684page_u9875_u9762_u4E5F_u652F_u6301__u591A_u8BF4_/_DISQUS__u8BC4_u8BBA_u7CFB_u7EDF" class="headerlink" title="让你的page页面也支持 多说 / DISQUS 评论系统"></a>让你的page页面也支持 多说 / DISQUS 评论系统</h3><p>Next主题默认page模板是没有评论的，如生成的标签云页面，分类页面，about页面等，都是不支持评论的。<br>如果想默认page模板也支持评论，需要更改NexT主题<code>page.swig</code>文件。<br><code>page.swig</code>的路径： <code>your-hexo-site/themes/next/layout/page.swig</code><br>把下面的代码<br><figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"></span><span class="template_tag">&#123;% <span class="keyword">if</span> page.comments %&#125;</span><span class="xml"></span><br><span class="line">  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"comments"</span> <span class="attribute">id</span>=<span class="value">"comments"</span>&gt;</span></span><br><span class="line">    </span><span class="template_tag">&#123;% <span class="keyword">if</span> (config.duoshuo and config.duoshuo.shortname) or config.duoshuo_shortname %&#125;</span><span class="xml"></span><br><span class="line">      <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ds-thread"</span> <span class="attribute">data-thread-key</span>=<span class="value">"</span></span></span><span class="variable">&#123;&#123; page.path &#125;&#125;</span><span class="xml"><span class="tag"><span class="value">"</span></span><br><span class="line">           <span class="attribute">data-title</span>=<span class="value">"</span></span></span><span class="variable">&#123;&#123; page.title &#125;&#125;</span><span class="xml"><span class="tag"><span class="value">"</span> <span class="attribute">data-url</span>=<span class="value">"</span></span></span><span class="variable">&#123;&#123; page.permalink &#125;&#125;</span><span class="xml"><span class="tag"><span class="value">"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">    </span><span class="template_tag">&#123;% elseif config.disqus_shortname %&#125;</span><span class="xml"></span><br><span class="line">      <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"disqus_thread"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">noscript</span>&gt;</span>Please enable JavaScript to view the <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"//disqus.com/?ref_noscript"</span>&gt;</span>comments powered by Disqus.<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">noscript</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">    </span><span class="template_tag">&#123;% <span class="keyword">endif</span> %&#125;</span><span class="xml"></span><br><span class="line">  <span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"></span><span class="template_tag">&#123;% <span class="keyword">endif</span> %&#125;</span><span class="xml"></span></span><br></pre></td></tr></table></figure></p>
+<p>复制到<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">    <span class="expansion">&#123;&#123; page.content &#125;&#125;</span></span><br><span class="line">  <span class="expansion">&#123;% endif %&#125;</span><br><span class="line">  /<span class="regexp">/上面的代码复制到这里</span><br><span class="line">&lt;/div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>接着将下面的代码<br><figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"></span><span class="template_tag">&#123;% <span class="keyword">block</span> comment_system %&#125;</span><span class="xml"></span><br><span class="line">  </span><span class="template_tag">&#123;% <span class="keyword">include</span> '_scripts/comments/duoshuo.swig' %&#125;</span><span class="xml"></span><br><span class="line">  </span><span class="template_tag">&#123;% <span class="keyword">include</span> '_scripts/comments/disqus.swig' %&#125;</span><span class="xml"></span><br><span class="line"></span><span class="template_tag">&#123;% <span class="keyword">endblock</span> %&#125;</span><span class="xml"></span></span><br></pre></td></tr></table></figure></p>
+<p>复制到下面代码的底部<br><figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"></span><span class="template_tag">&#123;% <span class="keyword">block</span> sidebar %&#125;</span><span class="xml"></span><br><span class="line">  </span><span class="variable">&#123;&#123; sidebar_template.render(false) &#125;&#125;</span><span class="xml"></span><br><span class="line"></span><span class="template_tag">&#123;% <span class="keyword">endblock</span> %&#125;</span><span class="xml"></span><br><span class="line">//代码插在这里</span></span><br></pre></td></tr></table></figure></p>
+<p>保存。<br>这时候，你新建的page页面除了标签云页面、分类页面均支持评论了，如about页面,效果如下：<br><img src="http://araome.yiluup.com/2015/06/about-page-comment.jpg" alt="about支持评论"></p>
+<h3 id="u4EC5_u5728_u6307_u5B9A_u7684_u5355_u4E2A_u9875_u9762page_u652F_u6301_u591A_u8BF4_u8BC4_u8BBA"><a href="#u4EC5_u5728_u6307_u5B9A_u7684_u5355_u4E2A_u9875_u9762page_u652F_u6301_u591A_u8BF4_u8BC4_u8BBA" class="headerlink" title="仅在指定的单个页面page支持多说评论"></a>仅在指定的单个页面page支持多说评论</h3><p>经过上面的修改，默认你新建的page页面都支持 多说 / DISQUS 评论系统，但是我想指定仅是某个页面支持评论那怎么办呢？<br>例如，我仅仅是想about页面支持多说评论系统(我使用的是多说评论系统， DISQUS 评论系统就不考虑了，你们自行修改吧)<br>还是更改NexT主题<code>page.swig</code>文件。<br>page.swig的路径： <code>your-hexo-site/themes/next/layout/page.swig</code><br>找到<code>page.swing</code>文件（没经过任何修改的，也就是经过上面提到的让你的page页面支持评论系统处理的），将下面代码<br><figure class="highlight handlebars"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">   &#123;% elif page.type === 'about' %&#125;</span><br><span class="line">   </span><span class="expression">&#123;&#123; <span class="variable">page.content</span> &#125;&#125;</span><span class="xml"></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"comments"</span> <span class="attribute">id</span>=<span class="value">"comments"</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ds-thread"</span> <span class="attribute">data-thread-key</span>=<span class="value">"</span></span></span><span class="expression">&#123;&#123; <span class="variable">page.path</span> &#125;&#125;</span><span class="xml"><span class="tag"><span class="value">"</span></span><br><span class="line">          <span class="attribute">data-title</span>=<span class="value">"</span></span></span><span class="expression">&#123;&#123; <span class="variable">page.title</span> &#125;&#125;</span><span class="xml"><span class="tag"><span class="value">"</span> <span class="attribute">data-url</span>=<span class="value">"</span></span></span><span class="expression">&#123;&#123; <span class="variable">page.permalink</span> &#125;&#125;</span><span class="xml"><span class="tag"><span class="value">"</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="title">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>
+<p>插在下面代码之间<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">        <span class="expansion">&#123;&#123; list_categories() &#125;&#125;</span></span><br><span class="line">      &lt;<span class="regexp">/div&gt;</span><br><span class="line">    &lt;/div</span>&gt;</span><br><span class="line"><span class="regexp">//</span>代码插在这里</span><br><span class="line">  <span class="expansion">&#123;% <span class="keyword">else</span> %&#125;</span><br><span class="line">    &#123;&#123; page.content &#125;&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>接着将下面的代码<br><figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"></span><span class="template_tag">&#123;% <span class="keyword">block</span> comment_system %&#125;</span><span class="xml"></span><br><span class="line">  </span><span class="template_tag">&#123;% <span class="keyword">include</span> '_scripts/comments/duoshuo.swig' %&#125;</span><span class="xml"></span><br><span class="line"></span><span class="template_tag">&#123;% <span class="keyword">endblock</span> %&#125;</span><span class="xml"></span></span><br></pre></td></tr></table></figure></p>
+<p>复制到下面代码的底部<br><figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"></span><span class="template_tag">&#123;% <span class="keyword">block</span> sidebar %&#125;</span><span class="xml"></span><br><span class="line">  </span><span class="variable">&#123;&#123; sidebar_template.render(false) &#125;&#125;</span><span class="xml"></span><br><span class="line"></span><span class="template_tag">&#123;% <span class="keyword">endblock</span> %&#125;</span><span class="xml"></span><br><span class="line">//代码插在这里</span></span><br></pre></td></tr></table></figure></p>
+<p>保存。</p>
+<h3 id="u6307_u5B9A_u591A_u4E2Apage_u9875_u9762_u652F_u6301_u591A_u8BF4_u8BC4_u8BBA"><a href="#u6307_u5B9A_u591A_u4E2Apage_u9875_u9762_u652F_u6301_u591A_u8BF4_u8BC4_u8BBA" class="headerlink" title="指定多个page页面支持多说评论"></a>指定多个page页面支持多说评论</h3><p>例如我想指定仅仅我的about页面和新生成的留言guestbook页面支持多说评论系统（怎样生成留言页后面会提到），只需将上面<br><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="preprocessor">%</span> elif page.type === <span class="string">'about'</span> <span class="preprocessor">%</span>&#125;</span><br></pre></td></tr></table></figure></p>
+<p>改成下面代码即可<br><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="preprocessor">%</span> elif page.type === <span class="string">'about'</span>|| page.type === <span class="string">'guestbook'</span> <span class="preprocessor">%</span>&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="u4E3A_u4F60_u7684hexo_u7F51_u7AD9NexT_u4E3B_u9898_u589E_u52A0_u7559_u8A00_u9875"><a href="#u4E3A_u4F60_u7684hexo_u7F51_u7AD9NexT_u4E3B_u9898_u589E_u52A0_u7559_u8A00_u9875" class="headerlink" title="为你的hexo网站NexT主题增加留言页"></a>为你的hexo网站NexT主题增加留言页</h3><p>经过上个步骤你现在可以任意指定某些页面支持多说系统，现在我们实现指定guestbook page支持多说系统，从而实现留言功能。指定guestbook页面支持多说系统很简单，只需要把上面提到的<strong>仅在指定的单个页面page支持多说评论</strong>这例子中的<code>page.type === &amp;#39;about&amp;#39;</code>改成<code>page.type === &amp;#39;guestbook&amp;#39;</code>即可。修改完毕后，接下来要做的是：</p>
+<ol>
+<li><p>找到你NexT主题<code>_config.yml</code>（主意是NexT主题的<code>_config.yml</code>，不是<a href="http://www.arao.me/tags/hexo/">hexo</a>站点目录下的<code>_config.yml</code>），文件路径<code>your-hexo-site/themes/next/_config.yml</code>，添加 guestbook 到 menu 中，如下:</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">menu</span>:</span><br><span class="line">  <span class="attribute">home</span>: /</span><br><span class="line">  #<span class="attribute">categories</span>: /categories</span><br><span class="line">  <span class="attribute">about</span>: /about</span><br><span class="line">  <span class="attribute">archives</span>: /archives</span><br><span class="line">  # <span class="attribute">tags</span>: /tags</span><br><span class="line">  #<span class="attribute">commonweal</span>: /<span class="number">404</span>.html</span><br><span class="line">  <span class="attribute">guestbook</span>: /guestbook</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>找到你NexT主题<code>zh-Hans.yml</code>文件（我的网站是简体语言的），文件路径<code>your-hexo-site/themes/next/languages/zh-Hans.yml</code>，添加 guestbook: 留言 到 menu 中，如下:</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">menu</span>:</span><br><span class="line">  <span class="attribute">home</span>: 首页</span><br><span class="line">  <span class="attribute">archives</span>: 归档</span><br><span class="line">  <span class="attribute">categories</span>: 分类</span><br><span class="line">  <span class="attribute">tags</span>: 标签</span><br><span class="line">  <span class="attribute">about</span>: 关于</span><br><span class="line">  <span class="attribute">commonweal</span>: 公益<span class="number">404</span></span><br><span class="line">  <span class="attribute">guestbook</span>: 留言</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>新建一个 guestbook 页面：</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> page <span class="string">"guestbook"</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="NexT_u4E3B_u9898_u6DFB_u52A0_u817E_u8BAF_u7A7A_u95F4404_u516C_u76CA_u9875_u9762"><a href="#NexT_u4E3B_u9898_u6DFB_u52A0_u817E_u8BAF_u7A7A_u95F4404_u516C_u76CA_u9875_u9762" class="headerlink" title="NexT主题添加腾讯空间404公益页面"></a>NexT主题添加腾讯空间404公益页面</h2><p>原来主题也有介绍了如何在增加腾讯公益404页面，但是整个页面跳了出去，我个人比较喜欢下面404页面嵌在内页这种风格<br><img src="http://araome.yiluup.com/2015/06/qzone-404.jpg" alt="腾讯空间404"><br>使用方法一样，新建404.html页面，将下面代码拷进去保存，放到主题的source目录下即可：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="doctype">&lt;!DOCTYPE HTML&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">title</span>&gt;</span>404 - arao'blog<span class="tag">&lt;/<span class="title">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">"description"</span> <span class="attribute">content</span>=<span class="value">"404错误，页面不存在！"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">meta</span> <span class="attribute">http-equiv</span>=<span class="value">"content-type"</span> <span class="attribute">content</span>=<span class="value">"text/html;charset=utf-8;"</span>/&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">meta</span> <span class="attribute">http-equiv</span>=<span class="value">"X-UA-Compatible"</span> <span class="attribute">content</span>=<span class="value">"IE=edge,chrome=1"</span> /&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">"robots"</span> <span class="attribute">content</span>=<span class="value">"all"</span> /&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">"robots"</span> <span class="attribute">content</span>=<span class="value">"index,follow"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"http://qzonestyle.gtimg.cn/qzone_v6/lostchild/search_children.js"</span> <span class="attribute">charset</span>=<span class="value">"utf-8"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="Swiftype_u7AD9_u5185_u641C_u7D22"><a href="#Swiftype_u7AD9_u5185_u641C_u7D22" class="headerlink" title="Swiftype站内搜索"></a><a href="http://www.arao.me/tags/swiftype/">Swiftype</a>站内搜索</h2><p>呃，NexT主题github上给的教程有点旧了，那就粗略说下最新的使用swiftype实现站内搜索方法吧，基于swiftype v2.0.0版本。<br>1.在站点的配置文件中增加<br><code>swiftype_key: your-swiftype-key</code></p>
+<p>2.在<a href="https://swiftype.com/users/sign_up" target="_blank" rel="external">swiftype官网</a>后台控制面板中选择 install，填完外观(appearance)一项后进入安装代码(install code)即可看到自己的 swiftype_key ,填外观(appearance)一直按next默认样式即可。<br><img src="http://araome.yiluup.com/2015/06/your-swiftype-key.jpg" alt="your-swiftype-key"></p>
+<p>3.在进入搜索框(search field)一项时，主意将搜索框的ID改成NexT主题搜索框的ID<code>#st-search-input</code><br><img src="http://araome.yiluup.com/2015/06/st-search-input.jpg" alt="swiftype搜索框ID"></p>
+<p>4.最后进入(activate)这一项，点击右下角的ACTIVATE SWIFTYPE按钮即可完成swiftype的所有配置了。</p>
+<p>5.可能遇到的问题：swiftype的爬虫一直抓取不了你的页面，一直搜索失败。后台提示如下：<br><strong>Our crawler hasn’t downloaded any pages yet</strong><br>If this message doesn’t disappear in a few minutes, please check that your website’s Robots.txt file does not block the “Swiftbot” User-agent, and that your website does not have Robots meta tags that prevent web crawlers from visiting your pages.<br>我一开始填写网址的时候是填了<code>http://www.arao.me</code>,后来改成<code>http://www.arao.me/</code>多了<code>/</code>后就成功了。</p>
+<h2 id="hexo_NexT_u4E3B_u9898_u9996_u9875title_u7684_u4F18_u5316"><a href="#hexo_NexT_u4E3B_u9898_u9996_u9875title_u7684_u4F18_u5316" class="headerlink" title="hexo NexT主题首页title的优化"></a>hexo NexT主题首页title的优化</h2><p>更改index.swig文件，文件路径是<code>your-hexo-site\themes\next\layout</code>，将下面代码<br><figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"></span><span class="template_tag">&#123;% <span class="keyword">block</span> title %&#125;</span><span class="xml"> </span><span class="variable">&#123;&#123; config.title &#125;&#125;</span><span class="xml"> </span><span class="template_tag">&#123;% <span class="keyword">endblock</span> %&#125;</span><span class="xml"></span></span><br></pre></td></tr></table></figure></p>
+<p>改成<br><figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"></span><span class="template_tag">&#123;% <span class="keyword">block</span> title %&#125;</span><span class="xml"> </span><span class="variable">&#123;&#123; config.title &#125;&#125;</span><span class="xml"> - </span><span class="variable">&#123;&#123; theme.description &#125;&#125;</span><span class="xml"> </span><span class="template_tag">&#123;% <span class="keyword">endblock</span> %&#125;</span><span class="xml"></span></span><br></pre></td></tr></table></figure></p>
+<p>这时候你的首页标题会更符合<code>网站名称 - 网站描述</code>这习惯。<br>进阶，做了<a href="http://www.arao.me/tags/seo/">seo</a>优化，把关键词也显示在Title标题里，可改成<br><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% block title %&#125; &#123;&#123; theme.keywords &#125;&#125; - &#123;&#123; config.title &#125;&#125; - &#123;&#123; theme.description &#125;&#125; &#123;% endblock %&#125;</span><br></pre></td></tr></table></figure></p>
+<p>注意：别堆砌关键字，整个标题一般不超过80个字符，可以通过chinaz的seo综合查询检查。</p>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/NexT主题/" rel="tag">#NexT主题</a>
+          
+            <a href="/tags/github/" rel="tag">#github</a>
+          
+            <a href="/tags/hexo/" rel="tag">#hexo</a>
+          
+            <a href="/tags/swiftype/" rel="tag">#swiftype</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/qiniu-qingcong-1k-diyongquan/" rel="next" title="青葱创业计划：凭edu邮箱免费领取七牛1000元抵用券">
+                <i class="fa fa-chevron-left"></i> 青葱创业计划：凭edu邮箱免费领取七牛1000元抵用券
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/hexo-next-theme-optimize-seo/" rel="prev" title="动动手指，不限于NexT主题的Hexo优化（SEO篇）">
+                动动手指，不限于NexT主题的Hexo优化（SEO篇） <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2015/hexo-next-theme-optimize-base/"
+     data-title="动动手指，NexT主题与Hexo更搭哦（基础篇）"
+     data-content=""
+     data-url="http://www.arao.me/2015/hexo-next-theme-optimize-base/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+        </div>
+
+        
+
+
+        
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2015/hexo-next-theme-optimize-base/"
+           data-title="动动手指，NexT主题与Hexo更搭哦（基础篇）" data-url="http://www.arao.me/2015/hexo-next-theme-optimize-base/">
+      </div>
+    
+  </div>
+
+
+      </div>
+
+      
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="http://araome.yiluup.com/xiongmao.jpg" alt="ARao Lin" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">ARao Lin</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">我们的征途是星辰大海</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">分类</span>
+              
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/araolin" target="_blank" rel="external nofollow">
+                  
+                    <i class="fa fa-github"></i> GitHub
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/208139345" target="_blank" rel="external nofollow">
+                  
+                    <i class="fa fa-weibo"></i> Weibo
+                  
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank" rel="external nofollow">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            <p class="site-author-name">Links</p>
+            
+              <span class="links-of-author-item">
+                <a href="https://shop152714861.taobao.com" target="_blank">我的男装店</a>
+              </span>
+            
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#NexT_u4E3B_u9898_u5B89_u88C5_u4F7F_u7528"><span class="nav-number">1.</span> <span class="nav-text">NexT主题安装使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u4ECE_GitHub__u4E0B_u8F7D"><span class="nav-number">1.1.</span> <span class="nav-text">从 GitHub 下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u66F4_u6539_u7AD9_u70B9__config-yml__u4E2D_u7684_theme__u5B57_u6BB5_u8BBE_u7F6E_u4E3A_next"><span class="nav-number">1.2.</span> <span class="nav-text">更改站点 _config.yml 中的 theme 字段设置为 next</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NexT_u4E3B_u9898_u7279_u8272_uFF1A_u7CBE_u4E8E_u5FC3_uFF0C_u7B80_u4E8E_u5F62"><span class="nav-number">1.3.</span> <span class="nav-text">NexT主题特色：精于心，简于形</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NexT_u4E3B_u9898_u521B_u5EFA__u201C_u7559_u8A00_u201D__u9875_u9762"><span class="nav-number">2.</span> <span class="nav-text">NexT主题创建 “留言” 页面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u8BA9_u4F60_u7684page_u9875_u9762_u4E5F_u652F_u6301__u591A_u8BF4_/_DISQUS__u8BC4_u8BBA_u7CFB_u7EDF"><span class="nav-number">2.1.</span> <span class="nav-text">让你的page页面也支持 多说 / DISQUS 评论系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u4EC5_u5728_u6307_u5B9A_u7684_u5355_u4E2A_u9875_u9762page_u652F_u6301_u591A_u8BF4_u8BC4_u8BBA"><span class="nav-number">2.2.</span> <span class="nav-text">仅在指定的单个页面page支持多说评论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u6307_u5B9A_u591A_u4E2Apage_u9875_u9762_u652F_u6301_u591A_u8BF4_u8BC4_u8BBA"><span class="nav-number">2.3.</span> <span class="nav-text">指定多个page页面支持多说评论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u4E3A_u4F60_u7684hexo_u7F51_u7AD9NexT_u4E3B_u9898_u589E_u52A0_u7559_u8A00_u9875"><span class="nav-number">2.4.</span> <span class="nav-text">为你的hexo网站NexT主题增加留言页</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NexT_u4E3B_u9898_u6DFB_u52A0_u817E_u8BAF_u7A7A_u95F4404_u516C_u76CA_u9875_u9762"><span class="nav-number">3.</span> <span class="nav-text">NexT主题添加腾讯空间404公益页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Swiftype_u7AD9_u5185_u641C_u7D22"><span class="nav-number">4.</span> <span class="nav-text">Swiftype站内搜索</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo_NexT_u4E3B_u9898_u9996_u9875title_u7684_u4F18_u5316"><span class="nav-number">5.</span> <span class="nav-text">hexo NexT主题首页title的优化</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+      
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ARao Lin</span>
+</div>
+
+<div class="powered-by">
+    由 <a class="theme-link" href="http://hexo.io" rel="external nofollow">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" rel="external nofollow">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"araolin"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//araome.yiluup.com/dsembed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+     
+  	  <script type="text/javascript">
+  		var duoshuo_user_ID = 12205009
+      var duoshuo_admin_nickname=""
+  	  </script>
+     
+  	<script src="/js/ua-parser.min.js"></script>
+  	<script src="/js/hook-duoshuo.js"></script>
+  
+
+
+    
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
+
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  <script type="text/javascript" src="/js/bootstrap.js"></script>
+
+  
+  
+
+  
+  
+
+</body>
+</html>

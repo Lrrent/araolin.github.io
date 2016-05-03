@@ -1,0 +1,817 @@
+<!doctype html>
+<html class="theme-next   use-motion ">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.useso.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="hexo,hexo最近访客,typecho,多说," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="ARAO'S BLOG" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+
+
+
+
+
+
+<meta name="description" content="下面简单介绍如何给你的Hexo站点添加最近访客，不仅限hexo的网站，其他如wordpress,typecho,emlog等也是可以参考的。
+
+引入多说通用JS代码注意修改您的多说二级域名，每个页面只需引用一次，也就是说你的页面本来就有多说评论的话，就无需再次添加该代码了。正在使用next主题的站长可以参考我的NexT主题创建“留言”页面实现指定某些页面添加多说评论系统。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="动动手指，给你的Hexo站点添加最近访客（多说篇）">
+<meta property="og:url" content="http://www.arao.me/2015/hexo-next-theme-optimize-duoshuo/index.html">
+<meta property="og:site_name" content="ARAO'S BLOG">
+<meta property="og:description" content="下面简单介绍如何给你的Hexo站点添加最近访客，不仅限hexo的网站，其他如wordpress,typecho,emlog等也是可以参考的。
+
+引入多说通用JS代码注意修改您的多说二级域名，每个页面只需引用一次，也就是说你的页面本来就有多说评论的话，就无需再次添加该代码了。正在使用next主题的站长可以参考我的NexT主题创建“留言”页面实现指定某些页面添加多说评论系统。">
+<meta property="og:image" content="http://araome.yiluup.com/2015/06/hexo-duoshuo-set.jpg">
+<meta property="og:image" content="http://araome.yiluup.com/2015/06/guestbook-index-md.jpg">
+<meta property="og:image" content="http://araome.yiluup.com/2015/06/duoshuo-css-f12.jpg">
+<meta property="og:updated_time" content="2016-04-28T20:29:38.574Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="动动手指，给你的Hexo站点添加最近访客（多说篇）">
+<meta name="twitter:description" content="下面简单介绍如何给你的Hexo站点添加最近访客，不仅限hexo的网站，其他如wordpress,typecho,emlog等也是可以参考的。
+
+引入多说通用JS代码注意修改您的多说二级域名，每个页面只需引用一次，也就是说你的页面本来就有多说评论的话，就无需再次添加该代码了。正在使用next主题的站长可以参考我的NexT主题创建“留言”页面实现指定某些页面添加多说评论系统。">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'post',
+    motion: true
+  };
+</script>
+
+  <title> 动动手指，给你的Hexo站点添加最近访客（多说篇） - ARAO'S BLOG </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?a91faef8ba220886db00454b50778abd";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">ARAO'S BLOG</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">我们的征途是星辰大海</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-guestbook">
+          <a href="/guestbook" rel="section">
+            
+              <i class="menu-item-icon fa fa-question-circle fa-fw"></i> <br />
+            
+            留言
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <form class="site-search-form">
+    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+  </form>
+
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'XCcmyzbrYQeB73Dy3--x','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                动动手指，给你的Hexo站点添加最近访客（多说篇）
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-06-28T01:46:59+08:00" content="2015-06-28">
+              2015-06-28
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/hexo-next-theme-optimize-duoshuo/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/hexo-next-theme-optimize-duoshuo/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          &nbsp; | &nbsp;热度
+              <span id="2015/hexo-next-theme-optimize-duoshuo/"></span>°C
+              <script type="text/javascript">
+              function getProfile(str) {
+                  var arr = str;
+                  document.getElementById('2015/hexo-next-theme-optimize-duoshuo/').innerHTML = arr;
+              }
+              </script>
+              
+              <script type="text/javascript">
+                var strPrint='<script type=\"text\/javascript\" src=\"http:\/\/pv.yiluup.com\/postviews.php?postID=';
+                strPrint +=  '2015/hexo-next-theme-optimize-duoshuo/';
+                strPrint +=  '&act=add';
+                strPrint += '\"><\/script>';
+                document.write(strPrint);
+               </script>
+          
+
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p><img src="http://araome.yiluup.com/2015/06/hexo-duoshuo-set.jpg" alt="多说自定义css和hexo最近访客"></p>
+<blockquote>
+<p>下面简单介绍如何给你的Hexo站点添加最近访客，不仅限<a href="http://www.arao.me/tags/hexo/">hexo</a>的网站，其他如wordpress,<a href="http://www.arao.me/tags/typecho/">typecho</a>,emlog等也是可以参考的。</p>
+</blockquote>
+<h3 id="u5F15_u5165_u591A_u8BF4_u901A_u7528JS_u4EE3_u7801"><a href="#u5F15_u5165_u591A_u8BF4_u901A_u7528JS_u4EE3_u7801" class="headerlink" title="引入多说通用JS代码"></a>引入多说通用JS代码</h3><p>注意修改您的多说二级域名，每个页面只需引用一次，也就是说你的页面本来就有多说评论的话，就无需再次添加该代码了。正在使用next主题的站长可以参考我的<a href="http://www.arao.me/2015/hexo-next-theme-optimize-base/#NexT主题创建_“留言”_页面">NexT主题创建“留言”页面</a>实现指定某些页面添加多说评论系统。</p>
+<a id="more"></a>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--多说js加载开始，一个页面只需要加载一次，注意修改您的多说二级域名 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><br><span class="line"><span class="keyword">var</span> duoshuoQuery = &#123;short_name:<span class="string">"您的多说二级域名"</span>&#125;;</span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> ds = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</span><br><span class="line">    ds.type = <span class="string">'text/javascript'</span>;ds.async = <span class="literal">true</span>;</span><br><span class="line">    ds.src = <span class="string">'http://static.duoshuo.com/embed.js'</span>;</span><br><span class="line">    ds.charset = <span class="string">'UTF-8'</span>;</span><br><span class="line">    (<span class="built_in">document</span>.getElementsByTagName(<span class="string">'head'</span>)[<span class="number">0</span>] || <span class="built_in">document</span>.getElementsByTagName(<span class="string">'body'</span>)[<span class="number">0</span>]).appendChild(ds);</span><br><span class="line">&#125;)();</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--多说js加载结束，一个页面只需要加载一次，注意修改您的多说二级域名 --&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="u5F80_u4F60_u60F3_u6DFB_u52A0_u7684_u9875_u9762_u589E_u52A0_u4E0B_u9762_u7684_u4E00_u5C0F_u6BB5_u4EE3_u7801_u5373_u53EF_u3002"><a href="#u5F80_u4F60_u60F3_u6DFB_u52A0_u7684_u9875_u9762_u589E_u52A0_u4E0B_u9762_u7684_u4E00_u5C0F_u6BB5_u4EE3_u7801_u5373_u53EF_u3002" class="headerlink" title="往你想添加的页面增加下面的一小段代码即可。"></a>往你想添加的页面增加下面的一小段代码即可。</h3><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="keyword">div</span> <span class="type">class</span>=<span class="string">"ds-recent-visitors"</span> data-num-items=<span class="string">"28"</span> data-avatar-size=<span class="string">"42"</span> <span class="property">id</span>=<span class="string">"ds-recent-visitors"</span>&gt;&lt;/<span class="keyword">div</span>&gt;</span><br></pre></td></tr></table></figure>
+<p>其中<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span>=“ds-recent-visitors”    <span class="comment">//指定显示最近访客容器</span></span><br><span class="line">data-num-items=“<span class="number">28</span>”    <span class="comment">//显示最近访客的数量</span></span><br><span class="line">data-avatar-size=“<span class="number">42</span>”    <span class="comment">//显示最近访客头像尺寸大小</span></span><br><span class="line">id=“ds-recent-visitors”    <span class="comment">//为了调节最近访客样式加的</span></span><br></pre></td></tr></table></figure></p>
+<p>我的hexo站点是通过直接生成了<code>guestbook</code>的<code>page</code>，然后直接在<code>/guestbook/</code>目录下的<code>index.md</code>添加了上面那段代码实现的。<br><img src="http://araome.yiluup.com/2015/06/guestbook-index-md.jpg" alt="guestbook目录下的index.md代码"></p>
+<h3 id="u4FEE_u6539hexo_u6700_u8FD1_u8BBF_u5BA2_u6837_u5F0F"><a href="#u4FEE_u6539hexo_u6700_u8FD1_u8BBF_u5BA2_u6837_u5F0F" class="headerlink" title="修改hexo最近访客样式"></a>修改<a href="http://www.arao.me/tags/hexo%E6%9C%80%E8%BF%91%E8%AE%BF%E5%AE%A2/">hexo最近访客</a>样式</h3><p>通过<code>多说后台管理&gt;设置&gt;基本设置&gt;自定义CSS</code>修改最近访客css样式</p>
+<ul>
+<li>最近访客竖着排，改成排成一列</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="id">#ds-recent-visitors</span> <span class="class">.ds-avatar</span> <span class="rules">&#123;<span class="rule"><span class="attribute">float</span>:<span class="value">left</span></span></span>&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>最近访客头像样式css和评论样式统一</li>
+</ul>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#<span class="keyword">ds</span>-reset .<span class="keyword">ds</span>-avatar img,#<span class="keyword">ds</span>-recent-visitors .<span class="keyword">ds</span>-avatar img&#123;这里是你定义的多说头像样式css&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>最近访客头像样式css和评论样式css分开设置</li>
+</ul>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#<span class="keyword">ds</span>-reset .<span class="keyword">ds</span>-avatar img&#123;这里是自定义多说评论头像样式&#125;</span><br><span class="line">#<span class="keyword">ds</span>-recent-visitors .<span class="keyword">ds</span>-avatar img&#123;这里是自定义的多说最近访客头像样式css&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>我的整个多说自定义css，其中访客样式和评论样式统一</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#ds-reset .ds-avatar img,</span></span><br><span class="line"><span class="preprocessor">#ds-recent-visitors .ds-avatar img &#123;</span></span><br><span class="line">width: <span class="number">54</span>px;</span><br><span class="line">height: <span class="number">54</span>px;     <span class="comment">/*设置图像的长和宽，这里要根据自己的评论框情况更改*/</span></span><br><span class="line">border-radius: <span class="number">27</span>px;     <span class="comment">/*设置图像圆角效果,在这里我直接设置了超过width/2的像素，即为圆形了*/</span></span><br><span class="line">-webkit-border-radius: <span class="number">27</span>px;     <span class="comment">/*圆角效果：兼容webkit浏览器*/</span></span><br><span class="line">-moz-border-radius: <span class="number">27</span>px;</span><br><span class="line">box-shadow: inset <span class="number">0</span> -<span class="number">1</span>px <span class="number">0</span> <span class="preprocessor">#<span class="number">3333</span>sf;     <span class="comment">/*设置图像阴影效果*/</span></span></span><br><span class="line">-webkit-box-shadow: inset <span class="number">0</span> -<span class="number">1</span>px <span class="number">0</span> <span class="preprocessor">#<span class="number">3333</span>sf;</span></span><br><span class="line">-webkit-transition: <span class="number">0.4</span>s;</span><br><span class="line">-webkit-transition: -webkit-transform <span class="number">0.4</span>s ease-out;</span><br><span class="line">transition: transform <span class="number">0.4</span>s ease-out;     <span class="comment">/*变化时间设置为0.4秒(变化动作即为下面的图像旋转360读）*/</span></span><br><span class="line">-moz-transition: -moz-transform <span class="number">0.4</span>s ease-out;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#ds-reset .ds-avatar img:hover,</span></span><br><span class="line"><span class="preprocessor">#ds-recent-visitors .ds-avatar img:hover &#123;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*设置鼠标悬浮在头像时的CSS样式*/</span>    box-shadow: <span class="number">0</span> <span class="number">0</span> <span class="number">10</span>px <span class="preprocessor">#fff;</span></span><br><span class="line">rgba(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">.6</span>), inset <span class="number">0</span> <span class="number">0</span> <span class="number">20</span><span class="function">px <span class="title">rgba</span><span class="params">(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">1</span>)</span></span>;</span><br><span class="line">-webkit-box-shadow: <span class="number">0</span> <span class="number">0</span> <span class="number">10</span>px <span class="preprocessor">#fff;</span></span><br><span class="line">rgba(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">.6</span>), inset <span class="number">0</span> <span class="number">0</span> <span class="number">20</span><span class="function">px <span class="title">rgba</span><span class="params">(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">1</span>)</span></span>;</span><br><span class="line">transform: rotateZ(<span class="number">360</span>deg);     <span class="comment">/*图像旋转360度*/</span></span><br><span class="line">-webkit-transform: rotateZ(<span class="number">360</span>deg);</span><br><span class="line">-moz-transform: rotateZ(<span class="number">360</span>deg);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#ds-thread #ds-reset .ds-textarea-wrapper textarea &#123;</span></span><br><span class="line">background: url(http:<span class="comment">//ww4.sinaimg.cn/small/649a4735gw1et7gnhy5fej20zk0m8q3q.jpg) right no-repeat;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#ds-recent-visitors .ds-avatar &#123;</span></span><br><span class="line"><span class="keyword">float</span>: left</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*隐藏多说底部版权*/</span></span><br><span class="line"><span class="preprocessor">#ds-thread #ds-reset .ds-powered-by &#123;</span></span><br><span class="line">display: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="u5982_u4F55_u6252_u522B_u4EBA_u591A_u8BF4_u81EA_u5B9A_u4E49_u6837_u5F0F"><a href="#u5982_u4F55_u6252_u522B_u4EBA_u591A_u8BF4_u81EA_u5B9A_u4E49_u6837_u5F0F" class="headerlink" title="如何扒别人多说自定义样式"></a>如何扒别人<a href="http://www.arao.me/tags/%E5%A4%9A%E8%AF%B4/">多说</a>自定义样式</h3><p>爱美之心人皆有之！有时候看到别人博客的多说样式很好看，总想扒下来搞到自己博客怎么办？貌似扒人家东西有点不道德哦！<br>按F12打开浏览器调试代码的功能，多说自定义样式css一般在<code>&lt;head&gt;&lt;/head&gt;</code>里，在<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">link</span> <span class="attribute">type</span>=<span class="value">"text/css"</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span> <span class="attribute">href</span>=<span class="value">"http://static.duoshuo.com/styles/embed.default.css?XXXXXXX.css"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">style</span> <span class="attribute">type</span>=<span class="value">"text/css"</span>&gt;</span><span class="css">这里是多说自定义<span class="tag">css</span></span><span class="tag">&lt;/<span class="title">style</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>里面，这样你就轻松地扒出来想要的多说自定义CSS样式了。Enjoy It!<br><img src="http://araome.yiluup.com/2015/06/duoshuo-css-f12.jpg" alt="F12调试工具下的多说自定义css"></p>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/hexo/" rel="tag">#hexo</a>
+          
+            <a href="/tags/hexo最近访客/" rel="tag">#hexo最近访客</a>
+          
+            <a href="/tags/typecho/" rel="tag">#typecho</a>
+          
+            <a href="/tags/多说/" rel="tag">#多说</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/hexo-next-theme-optimize-seo/" rel="next" title="动动手指，不限于NexT主题的Hexo优化（SEO篇）">
+                <i class="fa fa-chevron-left"></i> 动动手指，不限于NexT主题的Hexo优化（SEO篇）
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/hexo-optimize-pic-lazyload/" rel="prev" title="动动手指，Hexo页面图片实现延迟加载">
+                动动手指，Hexo页面图片实现延迟加载 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2015/hexo-next-theme-optimize-duoshuo/"
+     data-title="动动手指，给你的Hexo站点添加最近访客（多说篇）"
+     data-content=""
+     data-url="http://www.arao.me/2015/hexo-next-theme-optimize-duoshuo/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+        </div>
+
+        
+
+
+        
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2015/hexo-next-theme-optimize-duoshuo/"
+           data-title="动动手指，给你的Hexo站点添加最近访客（多说篇）" data-url="http://www.arao.me/2015/hexo-next-theme-optimize-duoshuo/">
+      </div>
+    
+  </div>
+
+
+      </div>
+
+      
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="http://araome.yiluup.com/xiongmao.jpg" alt="ARao Lin" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">ARao Lin</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">我们的征途是星辰大海</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">分类</span>
+              
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/araolin" target="_blank" rel="external nofollow">
+                  
+                    <i class="fa fa-github"></i> GitHub
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/208139345" target="_blank" rel="external nofollow">
+                  
+                    <i class="fa fa-weibo"></i> Weibo
+                  
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank" rel="external nofollow">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            <p class="site-author-name">Links</p>
+            
+              <span class="links-of-author-item">
+                <a href="https://shop152714861.taobao.com" target="_blank">我的男装店</a>
+              </span>
+            
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5F15_u5165_u591A_u8BF4_u901A_u7528JS_u4EE3_u7801"><span class="nav-number">1.</span> <span class="nav-text">引入多说通用JS代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5F80_u4F60_u60F3_u6DFB_u52A0_u7684_u9875_u9762_u589E_u52A0_u4E0B_u9762_u7684_u4E00_u5C0F_u6BB5_u4EE3_u7801_u5373_u53EF_u3002"><span class="nav-number">2.</span> <span class="nav-text">往你想添加的页面增加下面的一小段代码即可。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u4FEE_u6539hexo_u6700_u8FD1_u8BBF_u5BA2_u6837_u5F0F"><span class="nav-number">3.</span> <span class="nav-text">修改hexo最近访客样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5982_u4F55_u6252_u522B_u4EBA_u591A_u8BF4_u81EA_u5B9A_u4E49_u6837_u5F0F"><span class="nav-number">4.</span> <span class="nav-text">如何扒别人多说自定义样式</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+      
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ARao Lin</span>
+</div>
+
+<div class="powered-by">
+    由 <a class="theme-link" href="http://hexo.io" rel="external nofollow">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" rel="external nofollow">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"araolin"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//araome.yiluup.com/dsembed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+     
+  	  <script type="text/javascript">
+  		var duoshuo_user_ID = 12205009
+      var duoshuo_admin_nickname=""
+  	  </script>
+     
+  	<script src="/js/ua-parser.min.js"></script>
+  	<script src="/js/hook-duoshuo.js"></script>
+  
+
+
+    
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
+
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  <script type="text/javascript" src="/js/bootstrap.js"></script>
+
+  
+  
+
+  
+  
+
+</body>
+</html>
