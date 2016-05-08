@@ -147,11 +147,11 @@
   </entry>
   
   <entry>
-    <title>动动手指，Hexo页面图片实现延迟加载</title>
+    <title>动动手指，Hexo页面图片实现延迟加载(此方法无效)</title>
     <link href="http://www.arao.me/2015/hexo-optimize-pic-lazyload/"/>
     <id>http://www.arao.me/2015/hexo-optimize-pic-lazyload/</id>
     <published>2015-06-27T18:14:48.000Z</published>
-    <updated>2016-05-08T21:35:58.858Z</updated>
+    <updated>2016-05-08T22:12:31.221Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;/images/loading.gif&quot; alt=&quot;hexo实现图片延迟加载&quot; class=&quot;hx_lazyimg&quot; data-original=&quot;http://araome.yiluup.com/2015/06/lazyload-loading-pic.jpg&quot;&gt;&lt;/p&gt;
 &lt;h3 id=&quot;u5173_u4E8Elazyload_u56FE_u7247_u5EF6_u8FDF_u52A0_u8F7D_u7B80_u5355_u4ECB_u7ECD&quot;&gt;&lt;a href=&quot;#u5173_u4E8Elazyload_u56FE_u7247_u5EF6_u8FDF_u52A0_u8F7D_u7B80_u5355_u4ECB_u7ECD&quot; class=&quot;headerlink&quot; title=&quot;关于lazyload图片延迟加载简单介绍&quot;&gt;&lt;/a&gt;关于lazyload图片延迟加载简单介绍&lt;/h3&gt;&lt;p&gt;LazyLoad大家再熟悉不过的一个jquery插件了，它可以延迟加载长页面中的图片. 也就是说在浏览器可视区域外的图片不会被载入，直到用户将页面滚动到它们所在的位置才会加载并显示出来，这和图片预加载的处理方式正好刚好相反。图片不多的页面时，效果并不太明显，但是当页面大图片比较多的时候，这种效果就比较显著了，明显加快了页面的加载速度。浏览器将会在加载可见图片之后即进入就绪状态，在某些情况下还可以帮助降低服务器负担。&lt;br&gt;因此，比较流行的wordpress主题，&lt;a href=&quot;http://www.arao.me/tags/typecho/&quot;&gt;typecho&lt;/a&gt;主题，emlog主题等都使用了lazyload图片延迟加载来实现快速加载页面。&lt;/p&gt;

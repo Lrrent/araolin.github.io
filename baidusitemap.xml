@@ -4,6 +4,27 @@
 
     
   <url>
+    <loc>http://www.arao.me/2015/hexo-optimize-pic-lazyload/</loc>
+    <lastmod>2016-05-08T22:12:31.221Z</lastmod>
+    <data>
+        <display>
+        <title>动动手指，Hexo页面图片实现延迟加载(此方法无效)</title>
+        <pubTime>2015-06-27T18:14:48.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>lazyload</tag>
+         
+        <tag>typecho</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.arao.me/2015/hexo-next-theme-optimize-base/</loc>
     <lastmod>2016-05-08T21:41:27.019Z</lastmod>
     <data>
@@ -87,27 +108,6 @@
         <tag>七牛抵用券</tag>
          
         <tag>极客VIP</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.arao.me/2015/hexo-optimize-pic-lazyload/</loc>
-    <lastmod>2016-05-08T21:35:58.858Z</lastmod>
-    <data>
-        <display>
-        <title>动动手指，Hexo页面图片实现延迟加载</title>
-        <pubTime>2015-06-27T18:14:48.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-        <tag>lazyload</tag>
-         
-        <tag>typecho</tag>
          
          
            

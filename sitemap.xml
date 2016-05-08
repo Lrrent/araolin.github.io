@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.arao.me/2015/hexo-optimize-pic-lazyload/</loc>
+    
+    <lastmod>2016-05-08T22:12:31.221Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.arao.me/2015/hexo-next-theme-optimize-base/</loc>
     
     <lastmod>2016-05-08T21:41:27.019Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>http://www.arao.me/2015/qiniu-qingcong-1k-diyongquan/</loc>
     
     <lastmod>2016-05-08T21:35:58.905Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.arao.me/2015/hexo-optimize-pic-lazyload/</loc>
-    
-    <lastmod>2016-05-08T21:35:58.858Z</lastmod>
     
   </url>
   
