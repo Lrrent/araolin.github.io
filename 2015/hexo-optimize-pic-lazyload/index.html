@@ -1,18 +1,14 @@
 <!doctype html>
 <html class="theme-next   use-motion ">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -21,7 +17,11 @@
 
 
 
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -30,23 +30,23 @@
 
 
 
-<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="hexo,lazyload,typecho," />
+<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css">
 
 
-
-
-
-  <link rel="alternate" href="/atom.xml" title="ARAO'S BLOG" type="application/atom+xml" />
+  <meta name="keywords" content="hexo,lazyload,typecho,">
 
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+
+  <link rel="alternate" href="/atom.xml" title="ARAO'S BLOG" type="application/atom+xml">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2">
 
 
 
@@ -59,8 +59,8 @@
 <meta property="og:url" content="http://www.arao.me/2015/hexo-optimize-pic-lazyload/index.html">
 <meta property="og:site_name" content="ARAO'S BLOG">
 <meta property="og:description" content="关于lazyload图片延迟加载简单介绍LazyLoad大家再熟悉不过的一个jquery插件了，它可以延迟加载长页面中的图片. 也就是说在浏览器可视区域外的图片不会被载入，直到用户将页面滚动到它们所在的位置才会加载并显示出来，这和图片预加载的处理方式正好刚好相反。图片不多的页面时，效果并不太明显，但是当页面大图片比较多的时候，这种效果就比较显著了，明显加快了页面的加载速度。浏览器将会在加载可见图片">
-<meta property="og:image" content="http://araome.yiluup.com/2015/06/lazyload-loading-pic.jpg">
-<meta property="og:updated_time" content="2016-05-02T16:22:31.113Z">
+<meta property="og:image" content="http://www.arao.me/images/loading.gif">
+<meta property="og:updated_time" content="2016-05-08T21:35:58.858Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="动动手指，Hexo页面图片实现延迟加载">
 <meta name="twitter:description" content="关于lazyload图片延迟加载简单介绍LazyLoad大家再熟悉不过的一个jquery插件了，它可以延迟加载长页面中的图片. 也就是说在浏览器可视区域外的图片不会被载入，直到用户将页面滚动到它们所在的位置才会加载并显示出来，这和图片预加载的处理方式正好刚好相反。图片不多的页面时，效果并不太明显，但是当页面大图片比较多的时候，这种效果就比较显著了，明显加快了页面的加载速度。浏览器将会在加载可见图片">
@@ -75,10 +75,12 @@
   };
 </script>
 
+
+
   <title> 动动手指，Hexo页面图片实现延迟加载 - ARAO'S BLOG </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   <!--[if lte IE 8]>
   <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
@@ -109,12 +111,12 @@
   <div class="container one-column page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-meta ">
   
 
   <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
+    <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
       <span class="site-title">ARAO'S BLOG</span>
       <span class="logo-line-after"><i></i></span>
@@ -141,7 +143,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br>
             
             首页
           </a>
@@ -151,7 +153,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br>
             
             归档
           </a>
@@ -161,7 +163,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br>
             
             标签
           </a>
@@ -171,7 +173,7 @@
         <li class="menu-item menu-item-guestbook">
           <a href="/guestbook" rel="section">
             
-              <i class="menu-item-icon fa fa-question-circle fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-question-circle fa-fw"></i> <br>
             
             留言
           </a>
@@ -188,7 +190,7 @@
       
   
   <form class="site-search-form">
-    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+    <input type="text" id="st-search-input" class="st-search-input st-default-search-input">
   </form>
 
 
@@ -225,7 +227,7 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal " itemscope="" itemtype="http://schema.org/Article">
 
     
       <header class="post-header">
@@ -295,7 +297,7 @@
       
 
       
-        <span itemprop="articleBody"><p><img src="http://araome.yiluup.com/2015/06/lazyload-loading-pic.jpg" alt="hexo实现图片延迟加载"></p>
+        <span itemprop="articleBody"><p><img src="/images/loading.gif" alt="hexo实现图片延迟加载" class="hx_lazyimg" data-original="http://araome.yiluup.com/2015/06/lazyload-loading-pic.jpg"></p>
 <h3 id="u5173_u4E8Elazyload_u56FE_u7247_u5EF6_u8FDF_u52A0_u8F7D_u7B80_u5355_u4ECB_u7ECD"><a href="#u5173_u4E8Elazyload_u56FE_u7247_u5EF6_u8FDF_u52A0_u8F7D_u7B80_u5355_u4ECB_u7ECD" class="headerlink" title="关于lazyload图片延迟加载简单介绍"></a>关于lazyload图片延迟加载简单介绍</h3><p>LazyLoad大家再熟悉不过的一个jquery插件了，它可以延迟加载长页面中的图片. 也就是说在浏览器可视区域外的图片不会被载入，直到用户将页面滚动到它们所在的位置才会加载并显示出来，这和图片预加载的处理方式正好刚好相反。图片不多的页面时，效果并不太明显，但是当页面大图片比较多的时候，这种效果就比较显著了，明显加快了页面的加载速度。浏览器将会在加载可见图片之后即进入就绪状态，在某些情况下还可以帮助降低服务器负担。<br>因此，比较流行的wordpress主题，<a href="http://www.arao.me/tags/typecho/">typecho</a>主题，emlog主题等都使用了lazyload图片延迟加载来实现快速加载页面。</p>
 <a id="more"></a>
 <p>当然啦，你的网站纯文字的，就没必要多搞个jquery插件了。</p>
@@ -352,12 +354,9 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2015/hexo-optimize-pic-lazyload/"
-     data-title="动动手指，Hexo页面图片实现延迟加载"
-     data-content=""
-     data-url="http://www.arao.me/2015/hexo-optimize-pic-lazyload/">
+        <div class="ds-share flat" data-thread-key="2015/hexo-optimize-pic-lazyload/" data-title="动动手指，Hexo页面图片实现延迟加载" data-content="" data-url="http://www.arao.me/2015/hexo-optimize-pic-lazyload/">
   <div class="ds-share-inline">
-    <ul  class="ds-share-icons-16">
+    <ul class="ds-share-icons-16">
 
       <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
       <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
@@ -383,8 +382,7 @@
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/hexo-optimize-pic-lazyload/"
-           data-title="动动手指，Hexo页面图片实现延迟加载" data-url="http://www.arao.me/2015/hexo-optimize-pic-lazyload/">
+      <div class="ds-thread" data-thread-key="2015/hexo-optimize-pic-lazyload/" data-title="动动手指，Hexo页面图片实现延迟加载" data-url="http://www.arao.me/2015/hexo-optimize-pic-lazyload/">
       </div>
     
   </div>
@@ -410,7 +408,7 @@
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
@@ -420,8 +418,8 @@
       
 
       <section class="site-overview sidebar-panel ">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="http://araome.yiluup.com/xiongmao.jpg" alt="ARao Lin" itemprop="image"/>
+        <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <img class="site-author-image hx_lazyimg" src="/images/loading.gif" alt="ARao Lin" itemprop="image" data-original="http://araome.yiluup.comhttp://araome.yiluup.com/xiongmao.jpg">
           <p class="site-author-name" itemprop="name">ARao Lin</p>
         </div>
         <p class="site-description motion-element" itemprop="description">我们的征途是星辰大海</p>
@@ -484,7 +482,7 @@
         
           <div class="cc-license motion-element" itemprop="license">
             <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank" rel="external nofollow">
-              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+              <img src="/images/loading.gif" alt="Creative Commons" class="hx_lazyimg" data-original="http://araome.yiluup.com/images/cc-by-nc-sa.svg">
             </a>
           </div>
         
@@ -530,7 +528,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
+        <div class="copyright">
   
   &copy;  2015 - 
   <span itemprop="copyrightYear">2016</span>
@@ -613,6 +611,11 @@
 
   <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
   <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  <script type="text/javascript">
+      $(function() {
+          $("img.hx_lazyimg").lazyload({ effect: "fadeIn" });
+      });
+  </script>
 
   
   
